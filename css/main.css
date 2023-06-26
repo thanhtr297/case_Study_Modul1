@@ -2,25 +2,30 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Arial, sans-serif ;
 }
 #header {
-    background-color: mediumspringgreen;
-    height: 46px;
-}
-#header ul li{
-    display: inline-block;
-}
-#header img {
-    height: 46px;
-}
-#nav li {
+    background-color: rgb(0,14,33);
     text-align: center;
-    margin-bottom: 20px;
-    box-shadow: black;
 }
-#slide  img{
+nav {
+    background-color: yellow;
+}
+.content ul{
+    max-width: 1200px;
+    margin: auto;
+    height: 50px;
+}
 
-    width: 50%;
-    height: 400px;
+ul {
+    list-style: none;
+}
+nav ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav ul li, a {
+    font-size: 12px;
 }
 
