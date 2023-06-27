@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Thành mobile - điện thoại giá siêu tốt</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
+
+</head>
+<body>
+<header id="header">
+    <img src="/img/banner.jpg" alt="logo">
+</header>
+<nav>
+    <div class="content">
+        <ul>
+            <li><a href=""><img style="width: 120px" src="/img/logo-thanh-mobile-1-219.png" alt="Anh logo"> </a></li>
+            <li><a href=""><img style="width: 120px" src="/img/logo-iphone.png" alt="Anh logo"> </a></li>
+            <li><a href="">Hà Nội<i class="fas fa-chevron-circle-down"></i> </a></li>
+            <li><input placeholder="Bạn đang tìm gì.." type="text"><i class="fas fa-search"></i></li>
+            <li><a href=""></a>
+                <button style="width: 70px; height: 40px"><i class="fas fa-shopping-cart"></i></i>Giỏ hàng</button>
+            </li>
+            <li><a href="">Hotline <br>0961020994</a></li>
+            <li><a href="">Khuyến mãi</a></li>
+            <li><a href=""></a>
+                <button type="button" id="login" style="width: 70px; height: 60px"><a href="../login/login.html" style="color: black">Đăng
+                    nhập</a></button>
+            </li>
+        </ul>
+    </div>
+    <div id="listItem">
+        <ul>
+            <li><i class="fas fa-mobile-alt"></i><a href="" onclick="phone()">Điện thoại</a></li>
+            <li><i class="fas fa-laptop"></i><a href="" onclick="mac()">Macbook </a></li>
+            <li><i class="fas fa-tablet"></i><a href="" onclick="tab()">Tablet </a></li>
+            <li><i class="fas fa-tools"></i><a href="" onclick="fix()">Sửa chữa</a></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+
+</nav>
+<table  style="width: 300px; height: 200px;display: none " >
+    <tr id="id1">
+        <th colspan="2"> Thông tin sản phẩm</th>
+    </tr>
+
+    <tr>
+        <th>Tên</th>
+        <td><input type="text" id="name" ></td>
+
+    </tr>
+    <tr>
+        <th>Giá</th>
+        <td><input type="number" id="price"></td>
+    </tr>
+        <th>Ảnh</th>
+        <td><input type="text" id="image"></td>
+    </tr>
+    <tr>
+        <th></th>
+        <td>
+            <button style="background-color: limegreen" id="add" onclick="add()">Add</button>
+            <button style="background-color: gold" id="edit" onclick="update()">Save</button>
+        </td>
+    </tr>
+</table>
+<p id="display"></p>
+<div id="slide">
+    <img src="/img/slidegoc2.jpg">
+</div>
+
+<div id="footer">
+
+        <div class="ft1">
+            THÀNH MOBILE <br>
+            Đ/c: 515 Phạm Văn Đồng, Cổ Nhuế 1, Bắc Từ Liêm, Hà Nội<br>
+            Hotline: 08.140.88888<br>
+            Email: thanhmobile515@gmail.com<br>
+            <img style="width: 120px;height: 77px" src="https://thanhmobile.com/images/upload/images/logoSaleNoti.png">
+            <div class="ft3">
+                © Copyright by Thanhmobile.com 2023. Designed by Vicogroup.vn
+            </div>
+        </div>
+        <div class="ft2">
+            THÔNG TIN <br>
+            Trang chủ <br>
+            Điện Thoại <br>
+            Mac <br>
+            Tin tức <br>
+        </div>
+        <div class="ft2">
+            HƯỚNG DẪN MUA HÀNG <br>
+            Chính sách bảo mật <br>
+            Chính sách bảo hành đổi trả <br>
+            Chính sách thanh toán <br>
+            Chính sách vận chuyển <br>
+            THÔNG BÁO THAY ĐỔI ĐỊA ĐIỂM KINH DOANH <br>
+        </div>
+        <div class="ft2">
+            LIÊN KẾT MẠNG XÃ HỘI <br>
+            <a href="https://www.facebook.com/515thanhmobile"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.tiktok.com/@shopthanhmobile"><i class="fab fa-tiktok"></i></a>
+            <a href=""><i class="fab fa-instagram"></i></a>
+            <a href=""><i class="fab fa-youtube"></i></a>
+        </div>
+
+</div>
+
+</body>
+<script src="/JS/main.js"></script>
