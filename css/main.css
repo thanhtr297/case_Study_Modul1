@@ -58,7 +58,7 @@ nav ul li:nth-child(8) {
 }
 
 #listItem {
-    background-color: lightgoldenrodyellow;
+    background-color:#4CAF50;
 }
 #listItem li, a {
     color: black;
@@ -89,6 +89,31 @@ nav ul li:nth-child(8) {
 .ft3 {
     margin-top: 30px;
 }
+button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
 
+button:hover {
+    background-color: #45a049;
+}
 
+button:active {
+    background-color: #3e8e41;
+}
+#items {
+    margin-top: 50px;
+}
+#items img:hover {
+    scale: 1.2;
+}
 

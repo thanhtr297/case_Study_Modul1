@@ -22,94 +22,132 @@
             <li><a href="">Hà Nội<i class="fas fa-chevron-circle-down"></i> </a></li>
             <li><input placeholder="Bạn đang tìm gì.." type="text"><i class="fas fa-search"></i></li>
             <li><a href=""></a>
-                <button style="width: 70px; height: 40px">
-                    <i class="fas fa-shopping-cart"></i></i>Giỏ hàng</button>
+                <button style="width: 90px; height: 50px">
+                    <i class="fas fa-shopping-cart"></i></i>Giỏ hàng
+                </button>
             </li>
             <li><a href="">Hotline <br>0961020994</a></li>
             <li><a href="">Khuyến mãi</a></li>
             <li><a href=""></a>
-                <button type="button" id="login" style="width: 70px; height: 60px">
+                <button type="button" id="login" >
                     <a href="../login/login.html" style="color: black">Đăng
-                    nhập</a></button>
+                        nhập</a></button>
             </li>
         </ul>
     </div>
     <div id="listItem">
         <ul>
-            <li><i class="fas fa-mobile-alt"></i> <button onclick="phone()">Điện thoại</button></li>
-            <li><i class="fas fa-laptop"></i> <button onclick="mac()">Macbook  </button></li>
-            <li><i class="fas fa-tablet"></i> <button onclick="tablet()">Tablet </button></li>
-            <li><i class="fas fa-tools"></i> <button onclick="fix()">Sửa chữa </button></li>
-            <li></li>
-            <li></li>
+            <li><i class="fas fa-mobile-alt"></i>
+                <button onclick="phoneDisplay()">Điện thoại</button>
+            </li>
+            <li><i class="fas fa-laptop"></i>
+                <button onclick="macDisplay()">Macbook</button>
+            </li>
+            <li><i class="fas fa-tablet"></i>
+                <button onclick="tabletDisplay()">Tablet</button>
+            </li>
+            <li><img style= "width: 20px;height: 26px;" src="/img/watch2.PNG"></i>
+                <button onclick="watchDisplay()">Watch</button>
+            </li>
+            <li>
+
+                <button onclick="btnAdd()"><i class="fas fa-plus-circle"></i>Thêm sản phẩm</button>
+            </li>
+
         </ul>
     </div>
 
 </nav>
-<table  style="width: 300px; height: 200px;display: none " >
+<table  id="table"
+        style="width: 350px; height: 200px;
+margin-left: 40%;text-align: left;border: 5px solid red;
+ background-color: navajowhite; border-radius: 10px ;display: none">
     <tr id="id1">
-        <th colspan="2"> Thông tin sản phẩm</th>
+        <th colspan="2" style="text-align: center"> Thông tin sản phẩm</th>
     </tr>
 
     <tr>
         <th>Tên</th>
-        <td><input type="text" id="name" ></td>
+        <td><input type="text" id="name"></td>
 
+    </tr>
+    <tr>
+        <th>Loại</th>
+        <td>
+            <select id="brand" style="width: 165px">
+                <option value="phone">Phone</option>
+                <option value="mac">Mac</option>
+                <option value="tab">Tablet</option>
+                <option value="watch">Watch</option>
+            </select></td>
     </tr>
     <tr>
         <th>Giá</th>
         <td><input type="number" id="price"></td>
     </tr>
+    <tr>
         <th>Ảnh</th>
         <td><input type="text" id="image"></td>
     </tr>
     <tr>
-        <th></th>
+        <th>Chi tiết</th>
+        <td><input type="text" id="detail"></td>
+    </tr>
+    <tr>
+        <th>
+            <button style="background-color: #e86363" id="update" onclick="update()">
+                <i class="fas fa-edit"></i>Cập nhật</button></th>
         <td>
-            <button style="background-color: limegreen" id="add" onclick="add()">Add</button>
-            <button style="background-color: gold" id="edit" onclick="update()">Save</button>
+
+            <button style="background-color: blue" id="add" onclick="addProduct()">
+                <i class="fas fa-plus-square"></i>Add</button>
+            <button style="background-color: lightcoral" id="edit" onclick="save()">
+                <i class="far fa-save"></i>Save</button>
         </td>
     </tr>
+    <tr>
+
+    </tr>
 </table>
-<p id="display"></p>
+<p  id="display"></p>
 <div id="slide">
     <img src="/img/slidegoc2.jpg">
 </div>
 
 <div id="footer">
 
-        <div class="ft1">
-            THÀNH MOBILE <br>
-            Đ/c: 515 Phạm Văn Đồng, Cổ Nhuế 1, Bắc Từ Liêm, Hà Nội<br>
-            Hotline: 08.140.88888<br>
-            Email: thanhmobile515@gmail.com<br>
-            <img style="width: 120px;height: 77px" src="https://thanhmobile.com/images/upload/images/logoSaleNoti.png">
-            <div class="ft3">
-                © Copyright by Thanhmobile.com 2023. Designed by Vicogroup.vn
-            </div>
+    <div class="ft1">
+        THÀNH MOBILE <br>
+        Đ/c: 515 Phạm Văn Đồng, Cổ Nhuế 1, Bắc Từ Liêm, Hà Nội<br>
+        Hotline: 08.140.88888<br>
+        Email: thanhmobile515@gmail.com<br>
+        <img style="width: 120px;height: 77px" src="https://thanhmobile.com/images/upload/images/logoSaleNoti.png">
+        <div class="ft3">
+            © Copyright by Thanhmobile.com 2023. Designed by Vicogroup.vn
         </div>
-        <div class="ft2">
-            THÔNG TIN <br>
-            Trang chủ <br>
-            Điện Thoại <br>
-            Mac <br>
-            Tin tức <br>
-        </div>
-        <div class="ft2">
-            HƯỚNG DẪN MUA HÀNG <br>
-            Chính sách bảo mật <br>
-            Chính sách bảo hành đổi trả <br>
-            Chính sách thanh toán <br>
-            Chính sách vận chuyển <br>
-            THÔNG BÁO THAY ĐỔI ĐỊA ĐIỂM KINH DOANH <br>
-        </div>
-        <div class="ft2">
-            LIÊN KẾT MẠNG XÃ HỘI <br>
-            <a href="https://www.facebook.com/515thanhmobile"><i class="fab fa-facebook"></i></a>
-            <a href="https://www.tiktok.com/@shopthanhmobile"><i class="fab fa-tiktok"></i></a>
-            <a href=""><i class="fab fa-instagram"></i></a>
-            <a href=""><i class="fab fa-youtube"></i></a>
-        </div>
+    </div>
+    <div class="ft2">
+        THÔNG TIN <br>
+        Trang chủ <br>
+        Điện Thoại <br>
+        Mac <br>
+        Tin tức <br>
+    </div>
+    <div class="ft2">
+        HƯỚNG DẪN MUA HÀNG <br>
+        Chính sách bảo mật <br>
+        Chính sách bảo hành đổi trả <br>
+        Chính sách thanh toán <br>
+        Chính sách vận chuyển <br>
+        THÔNG BÁO THAY ĐỔI ĐỊA ĐIỂM KINH DOANH <br>
+    </div>
+    <div class="ft2">
+        LIÊN KẾT MẠNG XÃ HỘI <br>
+        <a href="https://www.facebook.com/515thanhmobile"><i class="fab fa-facebook"></i></a>
+        <a href="https://www.tiktok.com/@shopthanhmobile"><i class="fab fa-tiktok"></i></a>
+        <a href=""><i class="fab fa-instagram"></i></a>
+        <a href=""><i class="fab fa-youtube"></i></a>
+    </div>
 
 </div>
 
