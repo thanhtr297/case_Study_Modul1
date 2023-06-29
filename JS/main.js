@@ -7,36 +7,29 @@ class Phone {
         this.brand = brand
         this.detail = detail
     }
-
-    getBrand() {
-        return this.brand
-
-    }
 }
-
-
 let Product1 = new Phone(
     'IPHONE 14 Pro Max',
     'phone',
     26990000,
-    '/img/iphone/iphone-14-pro-max-vang-1.jpg',
+    'https://shopdunk.com/images/thumbs/0007808_iphone-14-pro-max-128gb.png',
     'Bảo hành chính hãng điện thoại <br> 1 năm tại các trung tâm bảo hành hãng')
 let Product2 = new Phone(
     'IPHONE 14 Pro',
     'phone', 24990000,
-    'https://cdn.viettelstore.vn/Images/Product/ProductImage/1896224739.jpeg',
+    'https://shopdunk.com/images/thumbs/0008744_iphone-14-pro-128gb_550.png',
     'Bảo hành chính hãng điện thoại <br> 1 năm tại các trung tâm bảo hành hãng')
 let Product3 = new Phone(
     'IPHONE 14 Plus',
     'phone',
     22990000,
-    'https://cdn2.cellphones.com.vn/x358,webp,q100/media/catalog/product/p/h/photo_2022-09-28_21-58-56_5.jpg',
+    'https://shopdunk.com/images/thumbs/0009496_iphone-14-plus-128gb.webp',
     'Bảo hành chính hãng điện thoại <br> 1 năm tại các trung tâm bảo hành hãng')
 let Product4 = new Phone(
     'Ipad pro M2 2023',
     'tab',
     19990000,
-    'https://cdn.tgdd.vn/Products/Images/522/294104/ipad-pro-m2-11-wifi-xam-thumb-600x600.jpg',
+    'https://shopdunk.com/images/thumbs/0007315_ipad-pro-m2-129-inch-wifi-128gb_550.jpeg',
     'Bảo hành chính hãng điện thoại <br>1 năm tại các trung tâm bảo hành hãng')
 let Product5 = new Phone(
     'Macbook Pro M2 2023',
@@ -47,15 +40,22 @@ let Product6 = new Phone(
     'Apple Watch Series 8',
     'watch',
     12990000,
-    'https://stcv4.hnammobile.com/downloads/5/thuc-hu-apple-watch-series-8-co-chuc-nang-noi-bat-moi-01656904033.jpg',
+    'https://shopdunk.com/images/thumbs/0002017_silver_550.png',
     'Bảo hành chính hãng điện thoại <br>1 năm tại các trung tâm bảo hành hãng')
 let Product7 = new Phone(
-    'Apple Watch Series 8',
+    'Apple Watch Series 7 LTE',
     'watch',
     12990000,
-    'https://stcv4.hnammobile.com/downloads/5/thuc-hu-apple-watch-series-8-co-chuc-nang-noi-bat-moi-01656904033.jpg',
+    'https://shopdunk.com/images/thumbs/0001048_apple-watch-series-7-thep-gps-cellular_550.png',
     'Bảo hành chính hãng điện thoại <br>1 năm tại các trung tâm bảo hành hãng')
-let listProduct = [Product1, Product2, Product3, Product4, Product5, Product6, Product7]
+let Product8 = new Phone(
+    'Apple Watch SE Nhôm GPS',
+    'watch',
+    5699000,
+    'https://shopdunk.com/images/thumbs/0001810_gold_550.webp',
+    'Bảo hành chính hãng điện thoại <br>1 năm tại các trung tâm bảo hành hãng'
+)
+let listProduct = [Product1, Product2, Product3, Product4, Product5, Product6, Product7,Product8]
 
 function pushProduct(arr) {
     let product = '';
@@ -67,8 +67,8 @@ function pushProduct(arr) {
              <p style="display: none" >${arr[i].brand}</p>
              <p>${arr[i].price}</p>
              <p style="font-size: 10px">${arr[i].detail}</p>
-             <button onclick="edit(${i})" id="edit">Sửa</button>
-             <button onclick="xoa(${i})" id="delele">Xóa</button>
+             <button onclick="edit(${i})" id="edit" >Sửa</button>
+             <button onclick="xoa(${i})" id="delele" >Xóa</button>
          </div> `
     }
     return product
@@ -98,9 +98,12 @@ function addProduct() {
     let newProduct = new Phone(name, brand, price, image, detail)
     if (name !== '' && brand !== '' && price !== '' && image !== '' && detail !== '') {
         listProduct.push(newProduct)
+        clear()
+        showProduct()
+    } else {
+        alert('Bạn chưa nhập đủ thông tin! ')
     }
-    clear()
-    showProduct()
+
 }
 
 // clear ô input
@@ -112,10 +115,9 @@ function clear() {
     document.getElementById('detail').value = '';
 }
 
-function save() {
-
-    alert('Đã lưu thành công!')
+function dong() {
     table.style.display = "none"
+    return table
 }
 
 /// kết thúc thêm sản phầm
@@ -147,8 +149,16 @@ function update() {
 // ***************************88
 /// start xóa
 function xoa(index) {
-    listProduct.splice(index, 1)
+
+    let check = confirm('Bạn có chắc chắc xóa?')
+    if (check) {
+        listProduct.splice(index, 1)
+        showProduct()
+    }
     showProduct()
 }
 
 // end xóa
+function sortProduct() {
+    
+}

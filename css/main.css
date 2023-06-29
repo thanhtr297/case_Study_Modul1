@@ -13,8 +13,14 @@ body {
     url('https://viwootech.com/wp-content/uploads/2021/04/Anh-cua-Moose-Photos-tu-Pexels-scaled-e1625587821808.jpg')
 
 }
+#banner{
+    width: 100%;
+    position: fixed;
+    top: 0;
+}
 nav {
     background-color: rgb(16,16,16);
+    /*position: fixed;*/
 
 }
 .content ul{
@@ -121,4 +127,18 @@ button:active {
 #items img:hover {
     scale: 1.2;
 }
-
+#table {
+    position: fixed;
+    width: 350px;
+    height: 250px;
+    margin-left: 35%;
+    text-align: left;
+    border: 10px solid deepskyblue;
+    background-color: navajowhite;
+    border-radius: 10px ;
+    display: none;
+    background-image: url("https://d500.epimg.net/cincodias/imagenes/2023/05/09/gadgets/1683630814_303965_1683630860_noticia_normal.jpg");
+}
+#name, #detail, #price, #detail, #brand {
+    margin-top: 6px;
+}
